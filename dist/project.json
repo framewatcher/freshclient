@@ -17,14 +17,6 @@
       "title": "Authenticated",
       "description": "A role for Authenticated Users."
     },
-    "procurement": {
-      "title": "Procurement",
-      "description": "A role for Procurement Users."
-    },
-    "finance": {
-      "title": "Finance",
-      "description": "A role for Finance Users."
-    },
     "manager": {
       "title": "Manager",
       "description": "A role for Manager Users."
