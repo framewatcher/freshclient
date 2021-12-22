@@ -26,8 +26,8 @@
       "description": "A role for Finance Users."
     },
     "management": {
-      "title": "Management",
-      "description": "A role for Management Users."
+      "title": "Manager",
+      "description": "A role for Manager Users."
     },
     "anonymous": {
       "title": "Anonymous",
