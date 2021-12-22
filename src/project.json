@@ -25,7 +25,7 @@
       "title": "Finance",
       "description": "A role for Finance Users."
     },
-    "management": {
+    "manager": {
       "title": "Manager",
       "description": "A role for Manager Users."
     },
