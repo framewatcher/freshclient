@@ -69,6 +69,11 @@
           };
         }]
       });
+      $stateProvider
+      .state('userprofile', {
+        url: '/userprofile',
+        templateUrl: 'views/user/userprofile.html'
+      });
 
     // Register the form builder provider.
     FormioFormBuilderProvider.register('', AppConfig.appUrl, {});
