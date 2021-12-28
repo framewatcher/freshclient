@@ -7,8 +7,10 @@
       <div class="row">
         <div class="col-lg-12" style="text-align: center;">
           <h3><span id="myemaildata" onload="checkmyemaildata()"></span></h3>
+          <h3><span id="myaccessdata" onload="checkmyemaildata()"></span></h3>
           <script type="text/javascript">
             document.getElementById("myemaildata").innerHTML = "Email : "+(JSON.parse(localStorage.formioAppUser)).data.email;
+            document.getElementById("myaccessdata").innerHTML = "Access Role : "+JSON.parse(localStorage.formioAppUser).data.accessGroup.data.accessName
           </script>
         </div>
       </div>
