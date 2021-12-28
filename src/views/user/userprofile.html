@@ -1,1 +1,4 @@
-<h3>Welcome <span onload="this.innerHTML=(JSON.parse(localStorage.formioAppUser)).data.email;"></span></h3>
+<h3><span id="myemaildata" onload="checkmyemaildata()"></span></h3>
+<script type="text/javascript">
+  document.getElementById("myemaildata").innerHTML = "Welcome "+(JSON.parse(localStorage.formioAppUser)).data.email;
+</script>
