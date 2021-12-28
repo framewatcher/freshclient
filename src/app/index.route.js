@@ -69,10 +69,16 @@
           };
         }]
       });
+
       $stateProvider
       .state('userprofile', {
         url: '/userprofile',
-        templateUrl: 'views/user/userprofile.html'
+        templateUrl: 'views/user/userprofile.html',
+        controller: ['$scope', function($scope) {
+          $scope.showResourceList = function() {
+            //empty to be done
+          };
+        }]
       });
 
     // Register the form builder provider.
