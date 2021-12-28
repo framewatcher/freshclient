@@ -1,4 +1,17 @@
-<h3><span id="myemaildata" onload="checkmyemaildata()"></span></h3>
-<script type="text/javascript">
-  document.getElementById("myemaildata").innerHTML = "Welcome "+(JSON.parse(localStorage.formioAppUser)).data.email;
-</script>
+<div class="">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <img src="assets/images/snet-logo.png">
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12" style="text-align: center;">
+          <h3><span id="myemaildata" onload="checkmyemaildata()"></span></h3>
+          <script type="text/javascript">
+            document.getElementById("myemaildata").innerHTML = "Email : "+(JSON.parse(localStorage.formioAppUser)).data.email;
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
