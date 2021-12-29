@@ -81,6 +81,17 @@
         }]
       });
 
+      $stateProvider
+      .state('userprofile', {
+        url: '/userprofile',
+        templateUrl: '/form/61cc0f27d9c6c511ccd7e8b8/',
+        controller: ['$scope', function($scope) {
+          $scope.showResourceList = function() {
+            //empty to be done
+          };
+        }]
+      });
+
     // Register the form builder provider.
     FormioFormBuilderProvider.register('', AppConfig.appUrl, {});
 
