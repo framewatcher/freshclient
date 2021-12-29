@@ -10,7 +10,7 @@
           <h3><span id="myaccessdata" onload="checkmyemaildata()"></span></h3>
           <script type="text/javascript">
             document.getElementById("myemaildata").innerHTML = "Email : "+JSON.parse(localStorage.formioAppUser).data.email;
-            document.getElementById("myaccessdata").innerHTML = "Position : "+JSON.parse(localStorage.formioAppUser).data.accessGroup.data.accessName
+            document.getElementById("myaccessdata").innerHTML = "Access Group : "+JSON.parse(localStorage.formioAppUser).data.accessGroup.data.accessName
           </script>
         </div>
       </div>
