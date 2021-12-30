@@ -74,7 +74,7 @@
       .state('userprofile', {
         url: '/userprofile',
         templateUrl: 'views/user/userprofile.html',
-        controller: ['$scope', function($scope) {
+        controller: ['$scope', function($scope, $rootScope) {
           $scope.myname = $rootScope.user._id;
         }]
       });
