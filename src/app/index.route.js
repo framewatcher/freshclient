@@ -84,7 +84,7 @@
       $stateProvider
       .state('vendorlist', {
         url: '/vendorlist',
-        templateUrl: '/form/61cc0f27d9c6c511ccd7e8b8/',
+        templateUrl: '/form/61cc0f27d9c6c511ccd7e8b8/submission/',
         controller: ['$scope', function($scope) {
           $scope.showResourceList = function() {
             //empty to be done
