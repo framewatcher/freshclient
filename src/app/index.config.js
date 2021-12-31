@@ -20,16 +20,7 @@
       FormioAuthProvider.setForceAuth(true);
       FormioAuthProvider.setStates('auth.login', 'home');
       FormioAuthProvider.register('login', 'user', 'login');
-      FormioResourceProvider.register('customer', AppConfig.vendor, {
-        templates: {
-          view: 'views/user/vendor.html'
-        },
-        controllers: {
-          view: ['$scope', '$rootScope', function($scope, $rootScope) {
-             $scope.myuid = $rootScope.user._id;
-          }]
-        }
-      });
+      FormioResourceProvider.register('customer', AppConfig.vendor, {});
     }
   ]);
 })();
