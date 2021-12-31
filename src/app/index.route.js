@@ -82,10 +82,10 @@
       $stateProvider
       .state('vendorlist', {
         url: '/vendorlist',
-        templateUrl: '/form/61cc0f27d9c6c511ccd7e8b8/submission',
-        controller: ['$scope', function($scope) {
+        templateUrl: 'views/user/vendor.html',
+        controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.showResourceList = function() {
-            //empty to be done
+            $scope.myuid = $rootScope.user._id;
           };
         }]
       });
