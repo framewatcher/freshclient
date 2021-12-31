@@ -19,7 +19,7 @@
       FormioAuthProvider.setForceAuth(true);
       FormioAuthProvider.setStates('auth.login', 'home');
       FormioAuthProvider.register('login', 'user', 'login');
-      // FormioResourceProvider.register('vendor', AppConfig.vendor, {});
+      FormioResourceProvider.register('vendor', AppConfig.vendor, {});
     }
   ]);
 })();
