@@ -11,6 +11,7 @@
       AppConfig,
       FormioProvider,
       FormioAuthProvider,
+      FormioResourceProvider,
       $locationProvider
     ) {
       $locationProvider.hashPrefix('');
