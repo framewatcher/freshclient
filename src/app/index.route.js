@@ -85,7 +85,7 @@
         templateUrl: 'views/user/vendor.html',
         controller: ['$scope', '$rootScope', '$http' ,function($scope, $rootScope, $http) {
           $scope.myuid = $rootScope.user._id;
-          $scope.getvendorlist = $http.get('/viewvendorlist');
+          $scope.getvendorlist = $http.get('http://localhost:3001/#/viewvendorlist');
         }]
       });
 
