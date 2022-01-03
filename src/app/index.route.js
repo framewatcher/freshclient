@@ -83,9 +83,9 @@
       .state('vendorlist', {
         url: '/vendorlist',
         templateUrl: 'views/user/vendor.html',
-        controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+        controller: ['$scope', '$rootScope', '$http' ,function($scope, $rootScope, $http) {
           $scope.myuid = $rootScope.user._id;
-
+          $scope.getvendorlist = $http.get(appUrl + 'viewvendorlist');
         }]
       });
 
