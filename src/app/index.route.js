@@ -83,9 +83,9 @@
       .state('vendorlist', {
         url: '/vendorlist',
         templateUrl: 'views/user/vendor.html',
-        controller: ['$scope', '$rootScope', '$http', '$Formio', function($scope, $rootScope, $http, $Formio) {
+        controller: ['$scope', '$rootScope', '$http', '$Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
-          $http.get('http://localhost:3001/#/viewvendorlist').then(function(result){ $scope.getvendorlist = JSON.stringify(result.data); });
+        $http.get('http://localhost:3001/#/viewvendorlist', {headers: {'x-jwt-token: Formio.getToken()'} }).then(function(result){ $scope.getvendorlist = JSON.stringify(result.data); });
         }]
       });
 
