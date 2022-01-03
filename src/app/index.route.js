@@ -89,6 +89,7 @@
         }]
       });
 
+      $stateProvider
       .state('viewvendorlist', {
         url: '/viewvendorlist',
         templateUrl: '/vendor',
