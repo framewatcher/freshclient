@@ -90,6 +90,15 @@
       });
 
       $stateProvider
+      .state('vendorview', {
+        url: '/vendorview',
+        templateUrl: 'views/user/vendorview.html',
+        controller: ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
+          $scope.myuid = $rootScope.user._id;
+
+      });
+
+      $stateProvider
       .state('viewvendorlist', {
         url: '/viewvendorlist',
         templateUrl: '/vendor/submission',
