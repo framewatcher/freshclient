@@ -12,7 +12,13 @@
             <formio src="vendorForm"></formio>
           </div>
           <div class="block">
-            <formio src="vendorall"></formio>
+            <formio src="vendorall" [submission]='{
+              "data": {
+                "vendorName": "Joe",
+                "active": "true",
+                "vendorCode": "jacquar123"
+              }
+            }'></formio>
           </div>
         </div>
       </div>
