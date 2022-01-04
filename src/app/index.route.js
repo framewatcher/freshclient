@@ -95,7 +95,6 @@
         templateUrl: '/vendor/submission',
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
-
         }]
       });
 
