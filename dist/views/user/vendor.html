@@ -1,14 +1,27 @@
-<div class="">
-  <h3>Vendor Page</h3>
-  <formio src="vendorForm"></formio>
-</div>
-<div class="block">
-  <formio src="vendorall"></formio>
-</div>
 
-<!-- <ul class="list-group">
-  <div class="well" style="text-align: center;" ng-if="noGroups">
-    <p>You currently do not have any selfie groups.</p>
+<div class="">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <img src="assets/images/snet-logo.png">
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12" style="text-align: center;">
+          <div class="">
+            <h3>Vendor Page</h3>
+            <formio src="vendorForm"></formio>
+          </div>
+          <div class="block">
+            <formio src="vendorall"></formio>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <li class="list-group-item" ng-repeat="group in groups"><a ui-sref="group.view({groupId: group._id})">{{ group.data.title }}</a></li>
+</div>
+<!-- <ul class="list-group">
+<div class="well" style="text-align: center;" ng-if="noGroups">
+<p>You currently do not have any selfie groups.</p>
+</div>
+<li class="list-group-item" ng-repeat="group in groups"><a ui-sref="group.view({groupId: group._id})">{{ group.data.title }}</a></li>
 </ul> -->
