@@ -6,13 +6,11 @@
     'AppConfig',
     'FormioProvider',
     'FormioAuthProvider',
-    'FormioResource',
     '$locationProvider',
     function(
       AppConfig,
       FormioProvider,
       FormioAuthProvider,
-      FormioResource,
       $locationProvider
     ) {
       $locationProvider.hashPrefix('');
@@ -21,7 +19,6 @@
       FormioAuthProvider.setForceAuth(true);
       FormioAuthProvider.setStates('auth.login', 'home');
       FormioAuthProvider.register('login', 'user', 'login');
-      FormioResource.register('vendor', 'http://localhost:3001/vendor');
 
     }
   ]);
