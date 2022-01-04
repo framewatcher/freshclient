@@ -6,11 +6,13 @@
     'AppConfig',
     'FormioProvider',
     'FormioAuthProvider',
+    'FormioResource',
     '$locationProvider',
     function(
       AppConfig,
       FormioProvider,
       FormioAuthProvider,
+      FormioResource,
       $locationProvider
     ) {
       $locationProvider.hashPrefix('');
