@@ -93,8 +93,9 @@
       .state('vendorview', {
         url: '/vendorview',
         templateUrl: 'views/user/vendorview.html',
-        controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+        controller: ['$scope', '$rootScope' ,'AppConfig' , function($scope, $rootScope, AppConfig) {
           $scope.myuid = $rootScope.user._id;
+          $scope.myappconfig = AppConfig ;
           }]
       });
 
