@@ -11,12 +11,7 @@
             <formio src="vendorForm"></formio>
           </div>
           <div class="block">
-            <formio src="vendorall" [submission]='{
-              "data": {
-                "vendorName": "Joe",
-                "vendorCode": "jacquar123"
-              }
-            }'></formio>
+            {{ getvendorlist }}
           </div>
         </div>
       </div>
