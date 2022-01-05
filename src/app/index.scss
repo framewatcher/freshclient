@@ -19,6 +19,14 @@ body {
   background-color: #f6f9ff;
 }
 
+.panel {
+    margin-bottom: 21px;
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 0;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0 , 0.15);
+}
+
 #panel-login {
   background-color: #cdd5e9;
   border-top-right-radius: 20px;
