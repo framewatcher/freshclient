@@ -12,6 +12,9 @@
           </div>
           <div class="block">
             {{ getvendorlist.data[0].data }}
+            <ul class="list-group">
+              <li class="list-group-item" ng-repeat="getvendorlist in getvendorlist"><a ui-sref="">{{ getvendorlist.data }}</a></li>
+            </ul>
           </div>
         </div>
       </div>
