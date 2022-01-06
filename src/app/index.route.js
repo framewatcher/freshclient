@@ -83,13 +83,13 @@
       .state('vendorlist', {
         url: '/vendorlist',
         templateUrl: 'views/user/vendor.html',
-        controller: ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
+        controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
         }]
       });
 
       $stateProvider
-      .state('vendorview', {
+      .state('home', {
         url: '/vendorview',
         templateUrl: 'views/user/vendorview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
