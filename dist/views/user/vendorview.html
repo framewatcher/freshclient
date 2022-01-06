@@ -8,11 +8,17 @@
         <div class="col-lg-12" style="text-align: center;">
           <div class="">
             <h3>Vendor List Page</h3>
-            <p>{{ myappconfig }}</p>
-            <formio-grid src="'http://localhost:3001/vendor'" columns="[ { field: 'data.vendorName', key: 'vendorName', label: 'The Vendor Name' } ]"></formio-grid>
+            <div class="block">
+              <ul class="list-group">
+                <li class="list-group-item" ng-repeat="getvendor in getvendorlist"><a ui-sref="">{{ getvendor.data.vendorName }}</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- <p>{{ myappconfig }}</p>
+<formio-grid src="'http://localhost:3001/vendor'" columns="[ { field: 'data.vendorName', key: 'vendorName', label: 'The Vendor Name' } ]"></formio-grid> -->
