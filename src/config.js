@@ -15,6 +15,7 @@ angular.module('formioApp').constant('AppConfig', {
   apiUrl: apiUrl,
   forms: {
     vendorForm: appUrl + '/vendor',
+    irfForm: appUrl + '/irf',
     vendorall: appUrl + '/#/viewvendorlist',
     userForm: appUrl + '/user',
     userLoginForm: appUrl + '/user/login'
