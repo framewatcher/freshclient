@@ -108,6 +108,15 @@
       });
 
       $stateProvider
+      .state('irfadd', {
+        url: '/irfadd',
+        templateUrl: 'views/irf/irfadd.html',
+        controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
+          $scope.myuid = $rootScope.user._id;
+        }]
+      });
+
+      $stateProvider
       .state('viewvendorlist', {
         url: '/viewvendorlist',
         templateUrl: '/vendor/submission',
