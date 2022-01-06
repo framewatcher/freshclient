@@ -85,7 +85,7 @@
         templateUrl: 'views/user/vendor.html',
         controller: ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
           $scope.myuid = $rootScope.user._id;
-          $http.get('http://localhost:3001/vendor/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getvendorlist = result; });
+          $http.get('http://localhost:3001/vendor/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getvendorlist = result.data; });
         }]
       });
 
