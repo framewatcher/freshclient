@@ -8,10 +8,10 @@
         <div class="col-lg-12" style="text-align: center;">
           <div class="">
             <h3>Vendor Registration Page</h3>
-            <formio src="vendorForm"></formio>
+            <!-- <p>{{ getvendorlist.data[0].data }}</p> -->
+            <!-- <formio src="vendorForm"></formio> -->
           </div>
           <div class="block">
-            {{ getvendorlist.data[0].data }}
             <ul class="list-group">
               <li class="list-group-item" ng-repeat="getvendor in getvendorlist"><a ui-sref="">{{ getvendorlist }}</a></li>
             </ul>
