@@ -101,7 +101,7 @@
       $stateProvider
       .state('irfview', {
         url: '/irfview',
-        templateUrl: 'views/user/irfview.html',
+        templateUrl: 'views/irf/irfview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
         }]
