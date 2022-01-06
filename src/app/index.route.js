@@ -89,7 +89,7 @@
       });
 
       $stateProvider
-      .state('home', {
+      .state('vendorview', {
         url: '/vendorview',
         templateUrl: 'views/user/vendorview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
