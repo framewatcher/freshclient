@@ -99,12 +99,11 @@
       });
 
       $stateProvider
-      .state('vendorview', {
-        url: '/vendorview',
-        templateUrl: 'views/user/vendorview.html',
+      .state('irfview', {
+        url: '/irfview',
+        templateUrl: 'views/user/irfview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
-          $http.get('http://localhost:3001/vendor/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getvendorlist = result.data; });
         }]
       });
 
