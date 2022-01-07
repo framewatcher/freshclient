@@ -112,7 +112,7 @@
       .state('irfadd', {
         url: '/irfadd',
         templateUrl: 'views/irf/irfadd.html',
-        controller: ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
+        controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
         }]
       });
