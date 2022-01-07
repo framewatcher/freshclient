@@ -104,7 +104,7 @@
         templateUrl: 'views/irf/irfview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
-          $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getirflist = result; });
+          $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getirflist = result.data; });
         }]
       });
 
@@ -112,7 +112,7 @@
       .state('irfadd', {
         url: '/irfadd',
         templateUrl: 'views/irf/irfadd.html',
-        controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
+        controller: ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
           $scope.myuid = $rootScope.user._id;
         }]
       });
