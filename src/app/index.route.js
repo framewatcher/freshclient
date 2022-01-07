@@ -72,7 +72,7 @@
 
       $stateProvider
       .state('userprofile', {
-        url: '/',
+        url: '/userprofile',
         templateUrl: 'views/user/userprofile.html',
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myname = $rootScope.user._id;
@@ -81,7 +81,7 @@
 
       $stateProvider
       .state('vendorlist', {
-        url: '/vendorlist',
+        url: '/',
         templateUrl: 'views/user/vendor.html',
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
