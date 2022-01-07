@@ -88,7 +88,6 @@
         }]
       });
 
-      $stateProvider.$state.reload();
 
       $stateProvider
       .state('vendorview', {
