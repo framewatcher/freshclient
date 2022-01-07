@@ -85,6 +85,7 @@
         templateUrl: 'views/user/vendor.html',
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
+          $state.reload();
         }]
       });
 
