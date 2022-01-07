@@ -11,16 +11,18 @@
             <table class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>
-                  <th>Company Name</th>
-                  <th>Active</th>
-                  <th>Remark</th>
+                  <th>IRF No</th>
+                  <th>Requisitioner Name</th>
+                  <th>Date</th>
+                  <th>Urgent</th>
                 </tr>
               </thead>
-              <!-- <tr ng-repeat="getvendor in getvendorlist">
-                <th><a >{{ getvendor.data.vendorName }}</a></th>
-                <td><a >{{ getvendor.data.active }}</a></td>
-                <td></td>
-              </tr> -->
+              <tr ng-repeat="getirf in getirflist">
+                <th><a >{{ getvendor.data.irfNo }}</a></th>
+                <td><a >{{ getvendor.data.requisitionerName }}</a></td>
+                <td><a >{{ getvendor.data.date }}</a></td>
+                <td><a >{{ getvendor.data.urgent }}</a></td>
+              </tr>
             </table>
           </div>
         </div>
