@@ -86,7 +86,7 @@
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
         }]
-      }).reload();
+      });
 
 
       $stateProvider
