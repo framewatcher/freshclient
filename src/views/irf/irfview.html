@@ -15,7 +15,7 @@
                   <th>Requisitioner Name</th>
                   <th>Date</th>
                   <th>Urgent</th>
-                  <th>Quotation</th>
+                  <th></th>
                 </tr>
               </thead>
               <tr ng-repeat="getirf in getirflist">
@@ -23,7 +23,7 @@
                 <td><a >{{ getirf.data.requisitionerName }}</a></td>
                 <td><a >{{ getirf.data.date }}</a></td>
                 <td><a >{{ getirf.data.urgent }}</a></td>
-                <td><button class="btn btn-primary btn-sm" type="button" name="buttonadd">Add</button> <button class="btn btn-success btn-sm" type="button" name="buttonview">View</button></td>
+                <td><button class="btn btn-primary btn-sm" type="button" name="buttonadd">Edit</button> <button class="btn btn-success btn-sm" type="button" name="buttonview">View</button></td>
               </tr>
             </table>
           </div>

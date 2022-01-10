@@ -88,7 +88,6 @@
         }]
       });
 
-
       $stateProvider
       .state('vendorview', {
         url: '/vendorview',
