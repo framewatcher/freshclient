@@ -9,12 +9,12 @@
           <ul>
             <li id="vendoradd"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="vendorlist">Add New Vendor</a></li>
             <li id="vendorview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="vendorview" href="#/vendorview">View Vendor List</a></li>
-            <li><span class="glyphicon glyphicon-edit"></span> <a ui-sref="irfadd" href="#/irfadd">Add New IRF</a> </li>
-            <li><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="irfview" href="#/irfview">View IRF List</a> </li>
-            <li><span class="glyphicon glyphicon-edit"></span> Quotation</li>
-            <li><span class="glyphicon glyphicon-edit"></span> PR</li>
-            <li><span class="glyphicon glyphicon-edit"></span> PO</li>
-            <li><span class="glyphicon glyphicon-edit"></span> Authority Matrix</li>
+            <li id="irfadd"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="irfadd" href="#/irfadd">Add New IRF</a> </li>
+            <li id="irfview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="irfview" href="#/irfview">View IRF List</a> </li>
+            <li id="quotation"><span class="glyphicon glyphicon-edit"></span> Quotation</li>
+            <li id="pr"><span class="glyphicon glyphicon-edit"></span> PR</li>
+            <li id="po"><span class="glyphicon glyphicon-edit"></span> PO</li>
+            <li id="am"><span class="glyphicon glyphicon-edit"></span> Authority Matrix</li>
           </ul>
         </div>
       </div>
@@ -140,12 +140,22 @@
 </div>
 <script type="text/javascript">
   admintablevisibility();
+  mainfeaturevisibility()
+  function mainfeaturevisibility(){
+
+  }
   function admintablevisibility(){
     var acname = JSON.parse(localStorage.formioAppUser).roles[0];
     if(acname != '61c2daa338bf8f1b6d685838' ){
       document.getElementById("admintable").style.visibility = "hidden";
       document.getElementById("vendoradd").style.display = "none";
       document.getElementById("vendorview").style.display = "none";
+      document.getElementById("irfadd").style.display = "none";
+      document.getElementById("irfview").style.display = "none";
+      document.getElementById("quotation").style.display = "none";
+      document.getElementById("pr").style.display = "none";
+      document.getElementById("po").style.display = "none";
+      document.getElementById("am").style.display = "none";
     }
   }
 </script>
