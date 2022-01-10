@@ -7,10 +7,11 @@
       <div class="row">
         <div class="col-lg-12" style="text-align: center;">
           <h3><span id="myemaildata" onload=""></span></h3>
+          <h3><span id="myuserNamedata" onload=""></span></h3>
           <h3><span id="myaccessdata" onload=""></span></h3>
           <script type="text/javascript">
             document.getElementById("myemaildata").innerHTML = "Email : "+JSON.parse(localStorage.formioAppUser).data.email;
-            document.getElementById("myaccessdata").innerHTML = "Access Group : "+JSON.parse(localStorage.formioAppUser).data.userName;
+            document.getElementById("myuserNamedata").innerHTML = "Access Group : "+JSON.parse(localStorage.formioAppUser).data.userName;
             document.getElementById("myaccessdata").innerHTML = "Access Group : "+JSON.parse(localStorage.formioAppUser).data.accessGroup.data.accessName;
           </script>
         </div>
