@@ -120,7 +120,7 @@
       $stateProvider
       .state('viewvendorlist', {
         url: '/viewvendorlist',
-        templateUrl: '/vendor/submission',
+        templateUrl: '/irf/submission',
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
         }]
