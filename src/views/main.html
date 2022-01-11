@@ -7,14 +7,14 @@
       <div class="row">
         <div class="col-lg-12" style="text-align: center;">
           <ul>
-            <li id="vendoradd"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="vendorlist">Add New Vendor</a></li>
-            <li id="vendorview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="vendorview" href="#/vendorview">View Vendor List</a></li>
-            <li id="irfadd"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="irfadd" href="#/irfadd">Add New IRF</a> </li>
-            <li id="irfview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="irfview" href="#/irfview">View IRF List</a> </li>
-            <li id="quotation"><span class="glyphicon glyphicon-edit"></span> Quotation</li>
-            <li id="pr"><span class="glyphicon glyphicon-edit"></span> PR</li>
-            <li id="po"><span class="glyphicon glyphicon-edit"></span> PO</li>
-            <li id="am"><span class="glyphicon glyphicon-edit"></span> Authority Matrix</li>
+            <div id="vendoradd"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="vendorlist">Add New Vendor</a></div>
+            <div id="vendorview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="vendorview" href="#/vendorview">View Vendor List</a></div>
+            <div id="irfadd"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="irfadd" href="#/irfadd">Add New IRF</a> </div>
+            <div id="irfview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="irfview" href="#/irfview">View IRF List</a> </div>
+            <div id="quotation"><span class="glyphicon glyphicon-edit"></span> Quotation</div>
+            <div id="pr"><span class="glyphicon glyphicon-edit"></span> PR</div>
+            <div id="po"><span class="glyphicon glyphicon-edit"></span> PO</div>
+            <div id="am"><span class="glyphicon glyphicon-edit"></span> Authority Matrix</div>
           </ul>
         </div>
       </div>
@@ -153,18 +153,18 @@
   function mainfeaturevisibility(){
     var acgroup = JSON.parse(localStorage.formioAppUser).data.accessGroup._id;
     if(acgroup == '61dbd91a9ae67b182d6b859d' ){
-      document.getElementById("vendoradd").style.display = "list-item;";
-      document.getElementById("vendorview").style.display = "list-item;";
-      document.getElementById("quotation").style.display = "list-item;";
-      document.getElementById("pr").style.display = "list-item;";
-      document.getElementById("po").style.display = "list-item;";
-      document.getElementById("am").style.display = "list-item;";
+      document.getElementById("vendoradd").style.display = "block";
+      document.getElementById("vendorview").style.display = "block";
+      document.getElementById("quotation").style.display = "block";
+      document.getElementById("pr").style.display = "block";
+      document.getElementById("po").style.display = "block";
+      document.getElementById("am").style.display = "block";
     }
     else if(acgroup == '61c2dc3a38bf8f1b6d685b3d'  ){
       document.getElementById("admintable").style.visibility = "show";
-      document.getElementById("vendoradd").style.display = "list-item;";
-      document.getElementById("vendorview").style.display = "list-item;";
-      document.getElementById("quotation").style.display = "list-item;";
+      document.getElementById("vendoradd").style.display = "block";
+      document.getElementById("vendorview").style.display = "block";
+      document.getElementById("quotation").style.display = "block";
     }
     else if(acgroup == '61c2dc1538bf8f1b6d685adc'  ){
     }
