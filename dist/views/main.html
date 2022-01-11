@@ -139,6 +139,14 @@
   </div>
 </div>
 <script type="text/javascript">
+  document.getElementById("admintable").style.visibility = "hidden";
+  document.getElementById("vendoradd").style.display = "none";
+  document.getElementById("vendorview").style.display = "none";
+  document.getElementById("quotation").style.display = "none";
+  document.getElementById("pr").style.display = "none";
+  document.getElementById("po").style.display = "none";
+  document.getElementById("am").style.display = "none";
+
   admintablevisibility();
   mainfeaturevisibility()
   function mainfeaturevisibility(){
@@ -147,17 +155,20 @@
   function admintablevisibility(){
     var acname = JSON.parse(localStorage.formioAppUser).roles[0];
     var acgroup = JSON.parse(localStorage.formioAppUser).data.accessGroup._id;
-    if(acname != '61c2daa338bf8f1b6d685838' ){
-      document.getElementById("admintable").style.visibility = "hidden";
+    if(acname == '61c2daa338bf8f1b6d685838' ){
+      document.getElementById("admintable").style.visibility = "show";
+      document.getElementById("vendoradd").style.display = "block";
+      document.getElementById("vendorview").style.display = "block";
+      document.getElementById("quotation").style.display = "block";
+      document.getElementById("pr").style.display = "block";
+      document.getElementById("po").style.display = "block";
+      document.getElementById("am").style.display = "block";
     }
-    if(acgroup != '61dbd91a9ae67b182d6b859d' ){
-      document.getElementById("admintable").style.visibility = "hidden";
-      document.getElementById("vendoradd").style.display = "none";
-      document.getElementById("vendorview").style.display = "none";
-      document.getElementById("quotation").style.display = "none";
-      document.getElementById("pr").style.display = "none";
-      document.getElementById("po").style.display = "none";
-      document.getElementById("am").style.display = "none";
+    if(acgroup == '61c2dc3a38bf8f1b6d685b3d'  ){
+      document.getElementById("admintable").style.visibility = "show";
+      document.getElementById("vendoradd").style.display = "block";
+      document.getElementById("vendorview").style.display = "block";
+      document.getElementById("quotation").style.display = "block";
     }
   }
 </script>
