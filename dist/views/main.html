@@ -153,18 +153,10 @@
   function mainfeaturevisibility(){
     var acgroup = JSON.parse(localStorage.formioAppUser).data.accessGroup._id;
     if(acgroup == '61dbd91a9ae67b182d6b859d' ){
-      document.getElementById("vendoradd").style.display = "block";
-      document.getElementById("vendorview").style.display = "block";
-      document.getElementById("quotation").style.display = "block";
-      document.getElementById("pr").style.display = "block";
-      document.getElementById("po").style.display = "block";
-      document.getElementById("am").style.display = "block";
+      $( "#vendoradd, #vendorview, #quotation, #pr, #po, #am" ).css( "display", "block" );
     }
     else if(acgroup == '61c2dc3a38bf8f1b6d685b3d'  ){
-      document.getElementById("admintable").style.visibility = "show";
-      document.getElementById("vendoradd").style.display = "block";
-      document.getElementById("vendorview").style.display = "block";
-      document.getElementById("quotation").style.display = "block";
+      $( "#vendoradd, #vendorview, #quotation" ).css( "display", "block" );
     }
     else if(acgroup == '61c2dc1538bf8f1b6d685adc'  ){
     }
