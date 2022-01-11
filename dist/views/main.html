@@ -50,30 +50,30 @@
         </div>
         <table class="table table-striped">
           <tbody>
-          <tr data-ng-repeat="resource in resources">
-            <td>
-              <div class="row">
-                <div class="col-sm-8">
-                  <a ui-sref="form.view({formId: resource._id})"><h5>{{ resource.title }}</h5></a>
-                </div>
-                <div class="col-sm-4">
-                  <div class="button-group pull-right" style="display:flex;">
-                    <a ui-sref="form.edit({formId: resource._id})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>&nbsp;
-                    <a ui-sref="form.delete({formId: resource._id, formType: 'resource'})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
+            <tr data-ng-repeat="resource in resources">
+              <td>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <a ui-sref="form.view({formId: resource._id})"><h5>{{ resource.title }}</h5></a>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="button-group pull-right" style="display:flex;">
+                      <a ui-sref="form.edit({formId: resource._id})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>&nbsp;
+                      <a ui-sref="form.delete({formId: resource._id, formType: 'resource'})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </td>
-          </tr>
+              </td>
+            </tr>
           </tbody>
         </table>
         <bgf-pagination
-          collection="resources"
-          url="resourcesUrl"
-          url-params="resourcesUrlParams"
-          per-page="formsPerPage"
-          template-url="formio-helper/pager.html"
-          ></bgf-pagination>
+        collection="resources"
+        url="resourcesUrl"
+        url-params="resourcesUrlParams"
+        per-page="formsPerPage"
+        template-url="formio-helper/pager.html"
+        ></bgf-pagination>
       </div>
       <div class="panel-footer text-right">
         <a ui-sref="createForm({formType: 'resource'})" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> New Resource</a>
@@ -107,30 +107,30 @@
         </div>
         <table class="table table-striped">
           <tbody>
-          <tr data-ng-repeat="form in forms">
-            <td>
-              <div class="row">
-                <div class="col-sm-8">
-                  <a ui-sref="form.view({formId: form._id})"><h5>{{ form.title }}</h5></a>
-                </div>
-                <div class="col-sm-4">
-                  <div class="button-group pull-right" style="display:flex;">
-                    <a ui-sref="form.edit({formId: form._id})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>&nbsp;
-                    <a ui-sref="form.delete({formId: form._id, formType: 'form'})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
+            <tr data-ng-repeat="form in forms">
+              <td>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <a ui-sref="form.view({formId: form._id})"><h5>{{ form.title }}</h5></a>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="button-group pull-right" style="display:flex;">
+                      <a ui-sref="form.edit({formId: form._id})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>&nbsp;
+                      <a ui-sref="form.delete({formId: form._id, formType: 'form'})" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </td>
-          </tr>
+              </td>
+            </tr>
           </tbody>
         </table>
         <bgf-pagination
-          collection="forms"
-          url="formsUrl"
-          url-params="formsUrlParams"
-          per-page="formsPerPage"
-          template-url="formio-helper/pager.html"
-          ></bgf-pagination>
+        collection="forms"
+        url="formsUrl"
+        url-params="formsUrlParams"
+        per-page="formsPerPage"
+        template-url="formio-helper/pager.html"
+        ></bgf-pagination>
       </div>
       <div class="panel-footer text-right">
         <a ui-sref="createForm({formType: 'form'})" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New Form</a>
@@ -140,12 +140,7 @@
 </div>
 <script type="text/javascript">
 
-  document.getElementById("vendoradd").style.display = "none";
-  document.getElementById("vendorview").style.display = "none";
-  document.getElementById("quotation").style.display = "none";
-  document.getElementById("pr").style.display = "none";
-  document.getElementById("po").style.display = "none";
-  document.getElementById("am").style.display = "none";
+  $( "#vendoradd, #vendorview, #quotation, #pr, #po, #am" ).css( "display", "none" );
 
   admintablevisibility();
   mainfeaturevisibility();
