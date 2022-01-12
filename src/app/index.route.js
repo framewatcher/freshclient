@@ -105,9 +105,6 @@
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getirflist = result.data; });
-          $scope.$on('pagination:loadPage', function (event, status, config) {
-            $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getirflist = result.data; });
-          });
         }]
       });
 
