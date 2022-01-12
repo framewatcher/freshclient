@@ -11,7 +11,7 @@
             <div id="vendorview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="vendorview" href="#/vendorview">View Vendor List</a></div>
             <div id="irfadd"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="irfadd" href="#/irfadd">Add New IRF</a> </div>
             <div id="irfview"><span class="glyphicon glyphicon-th-list"></span> <a ui-sref="irfview" href="#/irfview">View IRF List</a> </div>
-            <div id="quotation"><span class="glyphicon glyphicon-edit"></span> Quotation</div>
+            <div id="quotation"><span class="glyphicon glyphicon-edit"></span> <a ui-sref="qtview">Quotation View</a></div>
             <div id="pr"><span class="glyphicon glyphicon-edit"></span> PR</div>
             <div id="po"><span class="glyphicon glyphicon-edit"></span> PO</div>
             <div id="am"><span class="glyphicon glyphicon-edit"></span> Authority Matrix</div>
@@ -141,7 +141,7 @@
 <script type="text/javascript">
 
   $( "#vendoradd, #vendorview, #quotation, #pr, #po, #am" ).css( "display", "none" );
-  
+
   admintablevisibility();
   mainfeaturevisibility();
 
