@@ -43,14 +43,14 @@
             <table class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>
-                  <th>Company Name</th>
-                  <th>Active</th>
+                  <th>FT IRF</th>
+                  <th>Item List</th>
                   <th>Remark</th>
                 </tr>
               </thead>
               <tr ng-repeat="quotationItem in quotationItemlist">
-                <th><a >{{ quotationItem.data }}</a></th>
-                <td><a >{{ quotationItem.data }}</a></td>
+                <th><a >{{ quotationItem.data.ftirf }}</a></th>
+                <td><a >{{ quotationItem.data.itemList }}</a></td>
                 <td></td>
               </tr>
             </table>
