@@ -1,0 +1,65 @@
+<div class="">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <img src="assets/images/snet-logo.png">
+    </div>
+    <div class="panel-body" style="">
+      <div class="row">
+        <div class="col-lg-12" style="text-align: center;">
+          <div class="">
+            <h3>IRF List Page</h3>
+            <table class="table table-hover table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>IRF No</th>
+                  <th>Requisitioner Name</th>
+                  <th>Date</th>
+                  <th>Urgent</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tr ng-repeat="getirf in getirflist">
+                <th><a >{{ getirf.data.irfNo }}</a></th>
+                <td><a >{{ getirf.data.requisitionerName }}</a></td>
+                <td><a >{{ getirf.data.date }}</a></td>
+                <td><a >{{ getirf.data.urgent }}</a></td>
+                <td><button class="btn btn-success btn-sm" type="button" name="buttonview">View</button></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <img src="assets/images/snet-logo.png">
+    </div>
+    <div class="panel-body" style="">
+      <div class="row">
+        <div class="col-lg-12" style="text-align: center;">
+          <div class="">
+            <h3>Vendor List Page</h3>
+            <table class="table table-hover table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Company Name</th>
+                  <th>Active</th>
+                  <th>Remark</th>
+                </tr>
+              </thead>
+              <tr ng-repeat="getvendor in getvendorlist">
+                <th><a >{{ getvendor.data.vendorName }}</a></th>
+                <td><a >{{ getvendor.data.active }}</a></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
