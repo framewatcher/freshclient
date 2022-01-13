@@ -127,9 +127,9 @@
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.quotationItemlist = result.data; });
           var mx = [];
           $scope.mtx = [];
-          var x = 0;
-          while (x<2){
-            mx = $scope.getirflist[x]._id;
+          var x = 1;
+          while (x<3){
+            mx.push($scope.getirflist[x]._id;);
             x=x+1;
           }
           $scope.mtx = mx;
