@@ -130,7 +130,7 @@
           var xfaz = 1;
           while (xfaz<3){
             mx.push($scope.getirflist[x]._id);
-            x=x+1;
+            xfaz=xfaz+1;
           }
           $scope.mtx = mx;
         }]
