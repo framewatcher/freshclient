@@ -128,8 +128,7 @@
           $scope.gmyarray = [];
           angular.forEach($scope.getirflist,function(value,index){
                 $scope.gmyarray.push(value) ;
-            })
-          
+            });
         }]
       });
 
