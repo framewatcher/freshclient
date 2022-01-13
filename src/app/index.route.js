@@ -129,7 +129,7 @@
           $scope.mtx = [];
           var xfaz = 1;
           while (xfaz<3){
-            mx.push($scope.getirflist[x]._id);
+            mx.push($scope.getirflist[xfaz]._id);
             xfaz=xfaz+1;
           }
           $scope.mtx = mx;
