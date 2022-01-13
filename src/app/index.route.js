@@ -129,7 +129,7 @@
           $scope.mtx = [];
           var x = 1;
           while (x<3){
-            mx.push($scope.getirflist[x]._id;);
+            mx.push($scope.getirflist[x]._id);
             x=x+1;
           }
           $scope.mtx = mx;
