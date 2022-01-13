@@ -27,7 +27,7 @@
                 <td><a >{{ getirf.data.urgent }}</a></td>
                 <td><button class="btn btn-success btn-sm" type="button" name="buttonview">View</button></td>
                 <td><a class="btn btn-primary btn-sm" ui-sref="qtitemadd" href="#/qtitemadd">Add Quotation Item</a> </td>
-                <td ng-repeat="quotationItem in quotationItemlist"><div >{{ quotationItem.data.itemListItemId ===  getirf._id ? 'Diesel Green' : "one" }}</div></td>
+                <td ng-repeat="quotationItem in quotationItemlist"><div >{{ quotationItem.data.itemListItemId }}</div></td>
               </tr>
             </table>
           </div>
