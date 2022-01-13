@@ -125,6 +125,13 @@
           $scope.myuid = $rootScope.user._id;
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getirflist = result.data; });
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.quotationItemlist = result.data; });
+          var mx = [];
+          var x = 0;
+          while (x<2){
+            mx = $scope.getirflist[x]._id;
+            x=x+1;
+          }
+
         }]
       });
 
