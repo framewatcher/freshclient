@@ -129,6 +129,15 @@
       });
 
       $stateProvider
+      .state('qtitemadd', {
+        url: '/qtitemadd',
+        templateUrl: 'views/qt/quotationitemadd.html',
+        controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
+          $scope.myuid = $rootScope.user._id;
+        }]
+      });
+
+      $stateProvider
       .state('viewvendorlist', {
         url: '/viewvendorlist',
         templateUrl: '/irf/submission',
