@@ -125,14 +125,14 @@
           $scope.myuid = $rootScope.user._id;
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getirflist = result.data; });
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.quotationItemlist = result.data; });
-          var mx = [];
-          $scope.mtx = [];
-          var xfaz = 1;
-          while (xfaz<3){
-            mx.push($scope.getirflist[xfaz]._id);
-            xfaz=xfaz+1;
-          }
-          $scope.mtx = mx;
+          // var mx = [];
+          // $scope.mtx = [];
+          // var xfaz = 1;
+          // while (xfaz<3){
+          //   mx.push($scope.getirflist[xfaz]._id);
+          //   xfaz=xfaz+1;
+          // }
+          // $scope.mtx = mx;
         }]
       });
 
