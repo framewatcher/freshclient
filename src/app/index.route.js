@@ -131,7 +131,7 @@
             mx = $scope.getirflist[x]._id;
             x=x+1;
           }
-
+          $scope.mtx = mx;
         }]
       });
 
