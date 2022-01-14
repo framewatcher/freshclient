@@ -127,7 +127,7 @@
             function(result){
               $scope.getirflist = result.data;
               var irfdata = result.data;
-              $scope.gmyarray = irfdata;
+              $scope.gmyarray = irfdata.data;
 
             });
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
