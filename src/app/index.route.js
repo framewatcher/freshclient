@@ -123,15 +123,18 @@
         templateUrl: 'views/qt/quotationview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
-          $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){ $scope.getirflist = result.data; });
+          $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
+            function(result){
+              $scope.getirflist = result.data;
+              const irfdata = [];
+              irfdata = result.data;
+
+            });
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
               $scope.quotationItemlist = result.data;
             });
-          $scope.gmyarray = "onelife";
-          angular.forEach($scope.getirflist,function(value,index){
-                $scope.gmyarray.push(value) ;
-            });
+          $scope.gmyarray = irfdata;
         }]
       });
 
