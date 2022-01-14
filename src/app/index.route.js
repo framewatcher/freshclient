@@ -132,6 +132,10 @@
 
               for (var y = 0; y < irfdata.length; y++) {
                 joinirfitem.push( irfdata[y].data  ) ;
+
+                var newUser = "_id";
+                var newValue = irfdata[y]._id;
+                joinirfitem[y][newUser] = newValue ;
               }
 
             });
