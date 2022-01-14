@@ -123,11 +123,12 @@
         templateUrl: 'views/qt/quotationview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
+          var irfdata = ""
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
               $scope.getirflist = result.data;
               var irfdata = result.data;
-              $scope.gmyarray = irfdata[0].data;
+              $scope.gmyarray = irfdata[0]._id;
 
             });
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
