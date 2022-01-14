@@ -70,10 +70,11 @@
 <h3>{{ gmyarray }}</h3>
 <input type="text" ng-model="gmyarray">
 
-
-<tr ng-repeat="gmy in gmyarray">
-  <th><a >{{ gmy.irfNo }}</a></th>
-  <th><a >{{ gmy.requisitionerName }}</a></th>
-  <td><a >{{ gmy._id }}</a></td>
-  <td></td>
-</tr>
+<table>
+  <tr ng-repeat="gmy in gmyarray">
+    <td><a >{{ gmy.irfNo }}</a></td>
+    <td><a >{{ gmy.requisitionerName }}</a></td>
+    <td><a >{{ gmy._id }}</a></td>
+    <td></td>
+  </tr>
+</table>
