@@ -126,8 +126,7 @@
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
               $scope.getirflist = result.data;
-              var irfdata = [];
-              irfdata = result.data;
+              var irfdata = result.data;
 
             });
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
