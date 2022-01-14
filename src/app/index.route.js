@@ -128,7 +128,7 @@
             function(result){
               $scope.quotationItemlist = result.data;
             });
-          $scope.gmyarray = [];
+          $scope.gmyarray = "onelife";
           angular.forEach($scope.getirflist,function(value,index){
                 $scope.gmyarray.push(value) ;
             });
