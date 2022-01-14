@@ -127,13 +127,14 @@
             function(result){
               $scope.getirflist = result.data;
               var irfdata = result.data;
+              $scope.gmyarray = irfdata;
 
             });
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
               $scope.quotationItemlist = result.data;
             });
-            $scope.gmyarray = irfdata;
+
         }]
       });
 
