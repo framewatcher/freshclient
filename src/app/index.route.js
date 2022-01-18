@@ -124,24 +124,25 @@
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
           $scope.myuid = $rootScope.user._id;
           var joinirfitem = [];
+
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
+
               $scope.getirflist = result.data;
               var irfdata = result.data;
               // $scope.gmyarray = irfdata[0]._id;
-
               for (var y = 0; y < irfdata.length; y++) {
                 joinirfitem.push( irfdata[y].data  ) ;
-
                 var newUser = "_id";
                 var newValue = irfdata[y]._id;
                 joinirfitem[y][newUser] = newValue ;
               }
-
             });
+
           $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
               $scope.quotationItemlist = result.data;
+              var irfitemdata = result.data;
             });
 
             $scope.gmyarray = joinirfitem;
