@@ -164,7 +164,7 @@
       });
 
       $stateProvider
-      .state('qtitemreplyadd/{irfid}', {
+      .state('qtitemreplyadd', {
         url: '/qtitemreplyadd',
         templateUrl: 'views/qt/qtitemreplyadd.html',
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
