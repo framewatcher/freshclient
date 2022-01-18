@@ -159,6 +159,15 @@
       });
 
       $stateProvider
+      .state('qtitemreplyadd', {
+        url: '/qtitemreplyadd',
+        templateUrl: 'views/qt/qtitemreplyadd.html',
+        controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+          $scope.myuid = $rootScope.user._id;
+        }]
+      });
+
+      $stateProvider
       .state('viewvendorlist', {
         url: '/viewvendorlist',
         templateUrl: '/irf/submission',
