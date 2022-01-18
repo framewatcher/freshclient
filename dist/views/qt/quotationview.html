@@ -53,9 +53,11 @@
                 </tr>
               </thead>
               <tr ng-repeat="quotationItem in quotationItemlist">
-                <th><a >{{ quotationItem.data.itemListItemId }}</a></th>
+                <th><a >{{ quotationItem._id }}</a></th>
                 <th><a >{{ quotationItem.data.ftirf }}</a></th>
-                <td><a >{{ quotationItem.data.itemList }}</a></td>
+                <td><a >{{ quotationItem.data.itemTitle }}</a></td>
+                <td><a >{{ quotationItem.data.itemDetails }}</a></td>
+                <td><a >{{ quotationItem.data.itemQuantity }}</a></td>
                 <td><a class="btn btn-primary btn-sm" ui-sref="qtitemadd" href="#/qtitemadd">Add Quotation Item Reply</a> </td>
                 <td></td>
               </tr>
