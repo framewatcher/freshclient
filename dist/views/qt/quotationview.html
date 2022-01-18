@@ -27,7 +27,6 @@
                 <td><a >{{ getirf.data.urgent }}</a></td>
                 <td><button class="btn btn-success btn-sm" type="button" name="buttonview">View</button></td>
                 <td><a class="btn btn-primary btn-sm" ui-sref="qtitemadd" href="#/qtitemadd">Add Quotation Item</a> </td>
-                <td ng-repeat="quotationItem in quotationItemlist"><div >{{ quotationItem.data.itemListItemId }}</div></td>
               </tr>
             </table>
           </div>
@@ -57,6 +56,7 @@
                 <th><a >{{ quotationItem.data.itemListItemId }}</a></th>
                 <th><a >{{ quotationItem.data.ftirf }}</a></th>
                 <td><a >{{ quotationItem.data.itemList }}</a></td>
+                <td><a class="btn btn-primary btn-sm" ui-sref="qtitemadd" href="#/qtitemadd">Add Quotation Item Reply</a> </td>
                 <td></td>
               </tr>
             </table>
@@ -67,7 +67,6 @@
   </div>
 </div>
 <p>{{ gmyarray }}</p>
-<h3>{{ gmyarray }}</h3>
 <input type="text" ng-model="gmyarray">
 
 <table>
