@@ -142,21 +142,18 @@
               function(result){
                 $scope.quotationItemlist = result.data;
                 var irfitemdata = result.data;
+              }
+            );
+            $http.get('http://localhost:3001/qtitemreply/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){$scope.quotationitemreplylist = result.data;});
 
-              });
-              $http.get('http://localhost:3001/qtitemreply/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
-                function(result){
-                  $scope.quotationitemreplylist = result.data;
-                });
+            $scope.gmyarray = joinirfitem;
 
-                $scope.gmyarray = joinirfitem;
+            $scope.showirfitem = function() {
+              $scope.showirfitemlist = "one";
+            };
 
-                $scope.showirfitem = function() {
-                  $scope.showirfitemlist = "one";
-                };
-
-              }]
-              });
+            }]
+          });
 
       $stateProvider
       .state('qtitemadd', {
