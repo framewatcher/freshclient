@@ -5,11 +5,13 @@
   .config([
     'AppConfig',
     'FormioProvider',
+    'FormioResourceProvider',
     'FormioAuthProvider',
     '$locationProvider',
     function(
       AppConfig,
       FormioProvider,
+      FormioResourceProvider,
       FormioAuthProvider,
       $locationProvider
     ) {
