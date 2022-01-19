@@ -151,10 +151,6 @@
 
                 $scope.gmyarray = joinirfitem;
 
-                $scope.showirfitem = function(irfid) {
-                  $scope.showirfitemlist = irfid;
-                  };
-
                 }]
               });
 
