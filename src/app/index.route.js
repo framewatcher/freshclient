@@ -151,7 +151,11 @@
 
                 $scope.gmyarray = joinirfitem;
 
-                }]
+                $scope.showirfitem = function() {
+                  $scope.showirfitemlist = "one";
+                };
+
+              }]
               });
 
       $stateProvider
