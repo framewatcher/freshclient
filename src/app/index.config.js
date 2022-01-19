@@ -10,7 +10,6 @@
     function(
       AppConfig,
       FormioProvider,
-      FormioResourceProvider,
       FormioAuthProvider,
       $locationProvider
     ) {
