@@ -175,7 +175,7 @@
       $stateProvider
       .state('viewvendorlist', {
         url: '/viewvendorlist',
-        templateUrl: '/irf/submission',
+        templateUrl: '/irf/submission/61dd21a1f3b0365149792801',
         controller: ['$scope', '$rootScope', function($scope, $rootScope) {
           $scope.myuid = $rootScope.user._id;
         }]
