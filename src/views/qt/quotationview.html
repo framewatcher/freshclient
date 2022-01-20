@@ -68,7 +68,7 @@
                 <td><a >{{ showirfitem.data.itemTitle }}</a></td>
                 <td><a >{{ showirfitem.data.itemDetails }}</a></td>
                 <td><a >{{ showirfitem.data.itemQuantity }}</a></td>
-                <td><a class="btn btn-success btn-sm"  ng-click="showitemreply(showirfitem._id)" href="/#viewitemreplies">View Item Replies</a></td>
+                <td><a class="btn btn-success btn-sm"  ng-click="showitemreply(showirfitem._id)" onclick="gotoitemreplies()">View Item Replies</a></td>
                 <td><a class="btn btn-primary btn-sm" ui-sref="qtitemreplyadd" href="#/qtitemreplyadd">Add Quotation Item Reply</a> </td>
               </tr>
             </table>
@@ -79,7 +79,16 @@
   </div>
 </div>
 
-<div class="" id="anchorviewitemreplies">
+<script type="text/javascript">
+  function gotoitemreplies(){
+    window.scrollTo({
+      top: document.querySelector('#viewitemreplies').getBoundingClientRect().top + window.pageYOffset,
+      behavior: 'smooth'
+    })
+  }
+</script>
+
+<div class="" id="viewitemreplies">
   <div class="panel panel-primary">
     <div class="panel-body" style="">
       <div class="row">
