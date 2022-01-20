@@ -11,7 +11,7 @@
             <table class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>
-                  <!-- <th>ID</th> -->
+                  <th>ID</th>
                   <th>IRF No</th>
                   <th>Requisitioner Name</th>
                   <th>Date</th>
@@ -20,7 +20,7 @@
                 </tr>
               </thead>
               <tr ng-repeat="getirf in getirflist">
-                <!-- <th><a >{{ getirf._id }}</a></th> -->
+                <th><a >{{ getirf._id }}</a></th>
                 <th><a >{{ getirf.data.irfNo }}</a></th>
                 <td><a >{{ getirf.data.requisitionerName }}</a></td>
                 <td><a >{{ getirf.data.date }}</a></td>
