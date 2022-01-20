@@ -45,7 +45,7 @@
   }
 </script>
 
-<div class="" id="viewitemrequest" ng-if="false">
+<div class="" id="viewitemrequest" >
   <div class="panel panel-primary">
     <div class="panel-body" style="">
       <div class="row">
@@ -192,9 +192,11 @@
 myidirf : {{ irfid }}
 
 <input type="text" ng-model="showirfitemlist">
-<p>{{ showirfitemlist.length }}</p>
+<p>Total Item Requested for this IRF: {{ showirfitemlist.length }}</p>
 
-<p>{{ showitemreplylist.length }}</p>
+<p>Total Item Replied for this IRF: {{ showitemreplylist.length }}</p>
+
+<p>TOTAL IRF: {{ getirflist.length }}</p>
 
 
 <table>
