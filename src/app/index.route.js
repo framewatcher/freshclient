@@ -150,7 +150,7 @@
 
 
             $scope.showirfitem = function(irfid) {
-              $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
+              $http.get('http://localhost:3001/quotationItem/submission?data.ftirf='+irfid, {headers: {'x-jwt-token': Formio.getToken()} }).then(
                 function(result){
                   $scope.showirfitemlist = result.data;
                 }
