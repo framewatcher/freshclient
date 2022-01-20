@@ -141,7 +141,7 @@
             $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
               function(result){
                 $scope.quotationItemlist = result.data;
-                var irfitemdata = result.data;
+                // var irfitemdata = result.data;
               }
             );
             $http.get('http://localhost:3001/qtitemreply/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){$scope.quotationitemreplylist = result.data;});
@@ -149,12 +149,12 @@
             $scope.gmyarray = joinirfitem;
 
             $scope.showirfitem = function(irfid) {
-              $http.get('http://localhost:3001/quotationItem/submission?data.irfid='irfid, {headers: {'x-jwt-token': Formio.getToken()} }).then(
+              $http.get('http://localhost:3001/quotationItem/submission?data.irfid='+irfid, {headers: {'x-jwt-token': Formio.getToken()} }).then(
                 function(result){
-                  $scope.quotationItemlist = result.data;
+                  $scope.showirfitemlist = result.data;
                 }
               );
-              $scope.showirfitemlist = irfid;
+              // $scope.showirfitemlist = irfid;
             };
 
             }]
