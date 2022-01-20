@@ -169,6 +169,8 @@
               // $scope.showirfitemlist = irfid;
             };
 
+            $scope.itemnotempty = ($scope.showirfitemlist !== []);
+
           }]
           });
 
