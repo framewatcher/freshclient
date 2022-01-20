@@ -39,7 +39,8 @@
 <script type="text/javascript">
   function gotoitem(){
     window.scrollTo({
-      top: document.querySelector('#viewitemrequest').getBoundingClientRect().top + window.pageYOffset
+      top: document.querySelector('#viewitemrequest').getBoundingClientRect().top + window.pageYOffset,
+      behavior: 'smooth'
     })
   }
 </script>
