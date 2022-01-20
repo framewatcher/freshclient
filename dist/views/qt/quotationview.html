@@ -1,4 +1,4 @@
-<div class="">
+<div class="" id="irflist">
   <div class="panel panel-primary">
     <div class="panel-heading text-center">
       <img src="assets/images/snet-logo.png">
@@ -25,7 +25,7 @@
                 <td><a >{{ getirf.data.requisitionerName }}</a></td>
                 <td><a >{{ getirf.data.date }}</a></td>
                 <td><a >{{ getirf.data.urgent }}</a></td>
-                <td><button class="btn btn-success btn-sm" type="button" ng-click="showirfitem(getirf._id)" name="buttonview">View Item Requests</button></td>
+                <td><button class="btn btn-success btn-sm" type="button" ng-click="showirfitem(getirf._id)" name="buttonview"><a href="#viewitemrequest">View Item Requests</a></button></td>
                 <td><a class="btn btn-primary btn-sm" ui-sref="qtitemadd"  href="#/qtitemadd">Add Quotation Item</a> </td>
               </tr>
             </table>
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div class="">
+<div class="" id="viewitemrequest">
   <div class="panel panel-primary">
     <div class="panel-body" style="">
       <div class="row">
@@ -59,7 +59,7 @@
                 <td><a >{{ showirfitem.data.itemTitle }}</a></td>
                 <td><a >{{ showirfitem.data.itemDetails }}</a></td>
                 <td><a >{{ showirfitem.data.itemQuantity }}</a></td>
-                <td><button class="btn btn-success btn-sm" type="button" ng-click="showitemreply(showirfitem._id)" name="buttonview">View Item Replies</button></td>
+                <td><button class="btn btn-success btn-sm" type="button" ng-click="showitemreply(showirfitem._id)" name="buttonview"><a href="#viewitemreplies">View Item Replies</a></button></td>
                 <td><a class="btn btn-primary btn-sm" ui-sref="qtitemreplyadd" href="#/qtitemreplyadd">Add Quotation Item Reply</a> </td>
               </tr>
             </table>
@@ -70,7 +70,7 @@
   </div>
 </div>
 
-<div class="">
+<div class="" id="viewitemreplies">
   <div class="panel panel-primary">
     <div class="panel-body" style="">
       <div class="row">
