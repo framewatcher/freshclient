@@ -122,6 +122,7 @@
         url: '/qtview',
         templateUrl: 'views/qt/quotationview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
+          $scope.showitemreplylist = [];
           $scope.myuid = $rootScope.user._id;
           var joinirfitem = [];
 
