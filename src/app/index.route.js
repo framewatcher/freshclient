@@ -138,7 +138,7 @@
                 var newValue = irfdata[y]._id;
                 joinirfitem[y][newUser] = newValue ;
               }
-            });
+            }); 
             $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
               function(result){
                 $scope.quotationItemlist = result.data;
@@ -148,7 +148,6 @@
             $http.get('http://localhost:3001/qtitemreply/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){$scope.quotationitemreplylist = result.data;});
 
             $scope.gmyarray = joinirfitem;
-
 
             $scope.showirfitem = function(irfid) {
               $scope.showitemreplylist = [];
