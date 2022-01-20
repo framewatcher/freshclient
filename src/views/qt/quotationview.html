@@ -11,7 +11,7 @@
             <table class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>
-                  <th>ID</th>
+                  <!-- <th>ID</th> -->
                   <th>IRF No</th>
                   <th>Requisitioner Name</th>
                   <th>Date</th>
@@ -20,7 +20,7 @@
                 </tr>
               </thead>
               <tr ng-repeat="getirf in getirflist">
-                <th><a >{{ getirf._id }}</a></th>
+                <!-- <th><a >{{ getirf._id }}</a></th> -->
                 <th><a >{{ getirf.data.irfNo }}</a></th>
                 <td><a >{{ getirf.data.requisitionerName }}</a></td>
                 <td><a >{{ getirf.data.date }}</a></td>
@@ -46,16 +46,16 @@
             <table class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>FT IRF</th>
+                  <!-- <th>ID</th>
+                  <th>FT IRF</th> -->
                   <th>Item Title</th>
                   <th>Item Details</th>
                   <th>Item Quantity</th>
                 </tr>
               </thead>
               <tr ng-repeat="showirfitem in showirfitemlist">
-                <th><a >{{ showirfitem._id }}</a></th>
-                <th><a >{{ showirfitem.data.ftirf }}</a></th>
+                <!-- <th><a >{{ showirfitem._id }}</a></th>
+                <th><a >{{ showirfitem.data.ftirf }}</a></th> -->
                 <td><a >{{ showirfitem.data.itemTitle }}</a></td>
                 <td><a >{{ showirfitem.data.itemDetails }}</a></td>
                 <td><a >{{ showirfitem.data.itemQuantity }}</a></td>
@@ -80,8 +80,8 @@
             <table class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>FT Item ID</th>
+                  <!-- <th>ID</th>
+                  <th>FT Item ID</th> -->
                   <th>Vendor Name</th>
                   <th>Brand</th>
                   <th>Total Price</th>
@@ -89,8 +89,8 @@
                 </tr>
               </thead>
               <tr ng-repeat="showitemreply in showitemreplylist">
-                <th><a >{{ showitemreply._id }}</a></th>
-                <th><a >{{ showitemreply.data.quotationItemId }}</a></th>
+                <!-- <th><a >{{ showitemreply._id }}</a></th>
+                <th><a >{{ showitemreply.data.quotationItemId }}</a></th> -->
                 <td><a >{{ showitemreply.data.vendorName }}</a></td>
                 <td><a >{{ showitemreply.data.brand }}</a></td>
                 <td><a >{{ showitemreply.data.totalPrice }}</a></td>
