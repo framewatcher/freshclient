@@ -148,7 +148,7 @@
 
             $scope.gmyarray = joinirfitem;
 
-            $scope.showirfitem = function(var irfid) {
+            $scope.showirfitem = function(irfid) {
               $scope.showirfitemlist = irfid;
             };
 
