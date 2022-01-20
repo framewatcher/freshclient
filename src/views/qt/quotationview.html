@@ -42,7 +42,7 @@
       <div class="row">
         <div class="col-lg-12" style="text-align: center;">
           <div class="">
-            <h3>Show IRF Item List</h3>
+            <h3>View Item Requests</h3>
             <table class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>
@@ -59,7 +59,42 @@
                 <td><a >{{ showirfitem.data.itemTitle }}</a></td>
                 <td><a >{{ showirfitem.data.itemDetails }}</a></td>
                 <td><a >{{ showirfitem.data.itemQuantity }}</a></td>
+                <td><button class="btn btn-success btn-sm" type="button" ng-click="showitemreply(showirfitem._id)" name="buttonview">View Item Replies</button></td>
                 <td><a class="btn btn-primary btn-sm" ui-sref="qtitemreplyadd" href="#/qtitemreplyadd">Add Quotation Item Reply</a> </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="panel panel-primary">
+    <div class="panel-body" style="">
+      <div class="row">
+        <div class="col-lg-12" style="text-align: center;">
+          <div class="">
+            <h3>View Item Replies</h3>
+            <table class="table table-hover table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>FT Item ID</th>
+                  <th>Vendor Name</th>
+                  <th>Brand</th>
+                  <th>Total Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tr ng-repeat="quotationitemreply in quotationitemreplylist">
+                <th><a >{{ quotationitemreply._id }}</a></th>
+                <th><a >{{ quotationitemreply.data.quotationItemId }}</a></th>
+                <td><a >{{ quotationitemreply.data.vendorName }}</a></td>
+                <td><a >{{ quotationitemreply.data.brand }}</a></td>
+                <td><a >{{ quotationitemreply.data.totalPrice }}</a></td>
+                <td><a class="btn btn-primary btn-sm" >View </a> </td>
               </tr>
             </table>
           </div>
