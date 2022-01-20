@@ -122,6 +122,7 @@
         url: '/qtview',
         templateUrl: 'views/qt/quotationview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
+          var irfdata
           $scope.showitemreplylist = [];
           $scope.showirfitemlist = [];
           $scope.myuid = $rootScope.user._id;
@@ -131,7 +132,7 @@
             function(result){
 
               $scope.getirflist = result.data;
-              var irfdata = result.data;
+              irfdata = result.data;
               // $scope.gmyarray = irfdata[0]._id;
               for (var y = 0; y < irfdata.length; y++) {
                 joinirfitem.push( irfdata[y].data  ) ;
@@ -145,6 +146,13 @@
               function(result){
                 $scope.quotationItemlist = result.data;
                 var irfitemdata = result.data;
+
+                for (var y = 0; y < irfdata.length; y++) {
+                  var newUser = "totalitem" ;
+                  var newValue = irfitemdata.filter(item => item.data.ftirf === '0').length;
+                  joinirfitem[y][newUser] = newValue ;
+                }
+
               }
             );
 
