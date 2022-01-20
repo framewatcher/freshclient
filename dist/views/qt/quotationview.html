@@ -88,12 +88,12 @@
                   <th></th>
                 </tr>
               </thead>
-              <tr ng-repeat="quotationitemreply in quotationitemreplylist">
-                <th><a >{{ quotationitemreply._id }}</a></th>
-                <th><a >{{ quotationitemreply.data.quotationItemId }}</a></th>
-                <td><a >{{ quotationitemreply.data.vendorName }}</a></td>
-                <td><a >{{ quotationitemreply.data.brand }}</a></td>
-                <td><a >{{ quotationitemreply.data.totalPrice }}</a></td>
+              <tr ng-repeat="showitemreply in showitemreplylist">
+                <th><a >{{ showitemreply._id }}</a></th>
+                <th><a >{{ showitemreply.data.quotationItemId }}</a></th>
+                <td><a >{{ showitemreply.data.vendorName }}</a></td>
+                <td><a >{{ showitemreply.data.brand }}</a></td>
+                <td><a >{{ showitemreply.data.totalPrice }}</a></td>
                 <td><a class="btn btn-primary btn-sm" >View </a> </td>
               </tr>
             </table>
