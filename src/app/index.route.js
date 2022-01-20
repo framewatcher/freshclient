@@ -158,6 +158,15 @@
               // $scope.showirfitemlist = irfid;
             };
 
+            $scope.showitemreply = function(itemid) {
+              $http.get('http://localhost:3001/qtitemreply/submission?data.quotationItemId='+itemid, {headers: {'x-jwt-token': Formio.getToken()} }).then(
+                function(result){
+                  $scope.showitemreplylist = result.data;
+                }
+              );
+              // $scope.showirfitemlist = irfid;
+            };
+
             }]
           });
 
