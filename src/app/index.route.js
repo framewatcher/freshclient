@@ -148,8 +148,8 @@
 
             $scope.gmyarray = joinirfitem;
 
-            $scope.showirfitem = function() {
-              $scope.showirfitemlist = "one";
+            $scope.showirfitem = function(var irfid) {
+              $scope.showirfitemlist = irfid;
             };
 
             }]
