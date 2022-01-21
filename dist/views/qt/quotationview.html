@@ -17,6 +17,7 @@
                   <th>Requisitioner Name</th>
                   <th>Date</th>
                   <th>Urgent</th>
+                  <th>Urgent</th>
                   <th></th>
                 </tr>
               </thead>
@@ -36,6 +37,10 @@
     </div>
   </div>
 </div>
+
+<p>Total Item Requested for this IRF: {{ showirfitemlist.length }}</p>
+<p>Total Item Replied for this IRF: {{ showitemreplylist.length }}</p>
+<p>{{ quotationItem.length }}</p>
 
 <script type="text/javascript">
   function gotoitem(){
@@ -192,11 +197,7 @@
 
 
 <!-- <input type="text" ng-model="showirfitemlist"> -->
-<p>Total Item Requested for this IRF: {{ showirfitemlist.length }}</p>
 
-<p>Total Item Replied for this IRF: {{ showitemreplylist.length }}</p>
-
-<p>{{ quotationItem.length }}</p>
 
 <!-- <table class="table table-sm table-bordered">
   <tr ng-repeat="gmy in gmyarray">
