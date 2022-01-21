@@ -157,7 +157,7 @@
             for (var c = 0; c < joinirfitem.length; c++) {
               var newKey = "totalitem" ;
               var newData = irfitemdata.filter(function(item){
-                if (item.data.ftirf === joinirfitem._id) {
+                if (item.data.ftirf == joinirfitem[c]._id) {
                   return true;
                 } else {
                   return false;
