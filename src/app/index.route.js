@@ -122,8 +122,8 @@
         url: '/qtview',
         templateUrl: 'views/qt/quotationview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
-          var irfdata;
-          var irfitemdata;
+          var irfdata = [];
+          var irfitemdata =[];
           var joinirfitem = [];
           $scope.showitemreplylist = [];
           $scope.showirfitemlist = [];
