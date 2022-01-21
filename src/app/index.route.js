@@ -149,18 +149,20 @@
                 irfitemdata = result.data;
                 for (var c = 0; c < joinirfitem.length; c++) {
                   var newKey = "totalitem" ;
-                  var newData = checkcount(joinirfitem[c]._id);
+                  var newData = "dummy";
                   joinirfitem[c][newKey] = newData ;
+                  // var newData = checkcount(joinirfitem[c]._id);
+                  // joinirfitem[c][newKey] = newData ;
                 }
-                function checkcount(joinirf){
-                  var countitem = 0;
-                  for (var x = 0; x < irfitemdata.length; x++) {
-                    if (irfitemdata[x].data.ftirf == joinirf){
-                      countitem = countitem + 1;
-                    }
-                  }
-                  return countitem;
-                }
+                // function checkcount(joinirf){
+                //   var countitem = 0;
+                //   for (var x = 0; x < irfitemdata.length; x++) {
+                //     if (irfitemdata[x].data.ftirf === joinirf){
+                //       countitem = countitem + 1;
+                //     }
+                //   }
+                //   return countitem;
+                // }
               }
             );
 
