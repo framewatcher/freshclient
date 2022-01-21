@@ -154,15 +154,15 @@
               var newValue = irfdata[y]._id;
               joinirfitem[y][newUser] = newValue ;
             }
-            for (var c = 0; c < joinirfitem.length; c++) {
+            for (var c = 0; c < irfitemdata.length; c++) {
               var newKey = "totalitem" ;
-              var newData = irfitemdata.filter(function(item){
-                if (item.data.ftirf == joinirfitem[c]._id) {
+              var newData = storage.filter(function(item){
+                if (item.data.ftirf === joinirfitem[c]._id) {
                   return true;
                 } else {
                   return false;
                 }
-              }).length;
+              }).length
               joinirfitem[c][newKey] = newData ;
             }
             $scope.gmyarray = joinirfitem;//irfitemdata[y].filter(item => item.data.ftirf === joinirfitem._id).length;
