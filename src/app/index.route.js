@@ -122,11 +122,12 @@
         url: '/qtview',
         templateUrl: 'views/qt/quotationview.html',
         controller: ['$scope', '$rootScope', '$http', 'Formio', function($scope, $rootScope, $http, Formio) {
-          var irfdata
+          var irfdata;
+          var irfitemdata;
+          var joinirfitem = [];
           $scope.showitemreplylist = [];
           $scope.showirfitemlist = [];
           $scope.myuid = $rootScope.user._id;
-          var joinirfitem = [];
 
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
@@ -134,30 +135,33 @@
               $scope.getirflist = result.data;
               irfdata = result.data;
               // $scope.gmyarray = irfdata[0]._id;
-              for (var y = 0; y < irfdata.length; y++) {
-                joinirfitem.push( irfdata[y].data  ) ;
-                var newUser = "_id" ;
-                var newValue = irfdata[y]._id;
-                joinirfitem[y][newUser] = newValue ;
-              }
+
             });
 
             $http.get('http://localhost:3001/quotationItem/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
               function(result){
                 $scope.quotationItemlist = result.data;
-                var irfitemdata = result.data;
+                irfitemdata = result.data;
 
-                for (var y = 0; y < irfdata.length; y++) {
-                  var newUser = "totalitem" ;
-                  var newValue = irfitemdata.filter(item => item.data.ftirf === '0').length;
-                  joinirfitem[y][newUser] = newValue ;
-                }
+
 
               }
             );
 
             $http.get('http://localhost:3001/qtitemreply/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){$scope.quotationitemreplylist = result.data;});
 
+
+            for (var y = 0; y < irfdata.length; y++) {
+              joinirfitem.push( irfdata[y].data  ) ;
+              var newUser = "_id" ;
+              var newValue = irfdata[y]._id;
+              joinirfitem[y][newUser] = newValue ;
+            }
+            for (var y = 0; y < joinirfitem.length; y++) {
+              var newKey = "totalitem" ;
+              var newValue = irfitemdata[y].filter(item => item.data.ftirf === joinirfitem._id).length;
+              joinirfitem[y][newKey] = newValue ;
+            }
             $scope.gmyarray = joinirfitem;
 
             $scope.showirfitem = function(irfid) {
