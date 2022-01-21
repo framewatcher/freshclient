@@ -159,10 +159,16 @@
             }
             for (var y = 0; y < joinirfitem.length; y++) {
               var newKey = "totalitem" ;
-              var newValue = irfitemdata[y].filter(item => item.data.ftirf === joinirfitem._id).length;
+              var newValue = irfitemdata.filter(function(item){
+                if (item.data.ftirf == joinirfitem._id) {
+                  return true;
+                } else {
+                  return false;
+                }
+              }).length;
               joinirfitem[y][newKey] = newValue ;
             }
-            $scope.gmyarray = joinirfitem;
+            $scope.gmyarray = joinirfitem;//irfitemdata[y].filter(item => item.data.ftirf === joinirfitem._id).length;
 
             $scope.showirfitem = function(irfid) {
               $scope.showitemreplylist = [];
