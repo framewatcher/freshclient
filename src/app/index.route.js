@@ -134,6 +134,12 @@
               $scope.getirflist = result.data;
               irfdata = result.data;
               // $scope.gmyarray = irfdata[0]._id;
+              for (var y = 0; y < irfdata.length; y++) {
+                joinirfitem.push( irfdata[y].data  ) ;
+                var newUser = "_id" ;
+                var newValue = irfdata[y]._id;
+                joinirfitem[y][newUser] = newValue ;
+              }
 
             });
 
@@ -148,12 +154,7 @@
             $http.get('http://localhost:3001/qtitemreply/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(function(result){$scope.quotationitemreplylist = result.data;});
 
 
-            for (var y = 0; y < irfdata.length; y++) {
-              joinirfitem.push( irfdata[y].data  ) ;
-              var newUser = "_id" ;
-              var newValue = irfdata[y]._id;
-              joinirfitem[y][newUser] = newValue ;
-            }
+
             // for (var c = 0; c < joinirfitem.length; c++) {
             //   var newKey = "totalitem" ;
             //   var newData = checkcount(joinirfitem[c]._id);
