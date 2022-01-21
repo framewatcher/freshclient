@@ -131,7 +131,6 @@
 
           $http.get('http://localhost:3001/irf/submission', {headers: {'x-jwt-token': Formio.getToken()} }).then(
             function(result){
-
               $scope.getirflist = result.data;
               irfdata = result.data;
               // $scope.gmyarray = irfdata[0]._id;
@@ -142,8 +141,6 @@
               function(result){
                 $scope.quotationItemlist = result.data;
                 irfitemdata = result.data;
-
-
 
               }
             );
@@ -157,16 +154,16 @@
               var newValue = irfdata[y]._id;
               joinirfitem[y][newUser] = newValue ;
             }
-            for (var y = 0; y < joinirfitem.length; y++) {
+            for (var c = 0; c < joinirfitem.length; c++) {
               var newKey = "totalitem" ;
               var newValue = irfitemdata.filter(function(item){
-                if (item.data.ftirf == joinirfitem._id) {
+                if (item.data.ftirf === joinirfitem._id) {
                   return true;
                 } else {
                   return false;
                 }
               }).length;
-              joinirfitem[y][newKey] = newValue ;
+              joinirfitem[c][newKey] = newValue ;
             }
             $scope.gmyarray = joinirfitem;//irfitemdata[y].filter(item => item.data.ftirf === joinirfitem._id).length;
 
