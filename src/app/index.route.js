@@ -155,7 +155,7 @@
                 function checkcount(joinirf){
                   var countitem = 0;
                   for (var x = 0; x < irfitemdata.length; x++) {
-                    if (irfitemdata.data.ftirf == joinirf){
+                    if (irfitemdata[x].data.ftirf == joinirf){
                       countitem = countitem + 1;
                     }
                   }
